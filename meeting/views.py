@@ -7,14 +7,14 @@ from meeting.models.form import Ragistration
 
 @app.route("/")
 def index():
-    return render_template("public/index.html")
+    return render_template("meeting/index.html")
 
 
 @app.route("/thread")
 def thread():
     BBS_ARRAY = update()
     return render_template(
-        "public/thread.html", BBS_ARRAY=BBS_ARRAY, length=len(BBS_ARRAY)
+        "meeting/thread.html", BBS_ARRAY=BBS_ARRAY, length=len(BBS_ARRAY)
     )
 
 
@@ -23,7 +23,7 @@ def agenda():
     BBS_ARRAY = update()
     agendas = get_agendas()
     return render_template(
-        "public/agenda.html", BBS_ARRAY=BBS_ARRAY, agendas=agendas, length=len(agendas)
+        "meeting/agenda.html", BBS_ARRAY=BBS_ARRAY, agendas=agendas, length=len(agendas)
     )
 
 
@@ -34,9 +34,9 @@ def form():
         session["vote"] = form.vote.data
         session["comment"] = form.comment.data
         return redirect(url_for("result"))
-    return render_template("public/form.html", form=form)
+    return render_template("meeting/form.html", form=form)
 
 
 @app.route("/result")
 def result():
-    return render_template("public/result.html")
+    return render_template("meeting/result.html")
