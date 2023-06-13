@@ -1,4 +1,4 @@
-from meeting.models.wikiScraping import update
+from meeting.models.thread import update
 
 BBS_ARRAY = update()
 length = len(BBS_ARRAY)

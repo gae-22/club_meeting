@@ -1,9 +1,6 @@
-{% extends "layout.html" %} {% block content %} {% from
-"testapp/formhelpers.html" import render_field %}
-<form method="POST">
-    {{ form.csrf_token }} {{ render_field(form.vote) }}{{
-    render_field(form.password) }} {{ render_field(form.re_password) }} {{
-    render_field(form.accept) }} {{ render_field(form.comment) }} {{
-    form.submit() }}
-</form>
-{%endblock%}
+{% extends "layout.html" %} {% block content %}
+<iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLSfGXxFzFfV8qqDDlhDfrq7v7Wy5rwfddPA_sauQZ0bRCvsvvA/viewform?embedded=true"
+    >読み込んでいます…</iframe
+>
+{% endblock %}

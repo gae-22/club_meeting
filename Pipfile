@@ -9,6 +9,7 @@ requests = "*"
 beautifulsoup4 = "*"
 urllib3 = "==1.26.6"
 flask-wtf = "*"
+configparser = "*"
 
 [dev-packages]
 

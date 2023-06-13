@@ -1,8 +1,8 @@
-from flask import redirect, render_template, request, session, url_for
+from flask import render_template
 from meeting import app
-from meeting.models.wikiScraping import update
+from meeting.models.thread import update
 from meeting.models.agenda import get_agendas
-from meeting.models.form import Ragistration
+from meeting.models.room import rooms
 
 
 @app.route("/")
@@ -27,16 +27,12 @@ def agenda():
     )
 
 
-@app.route("/form", methods=["GET", "POST"])
+@app.route("/form")
 def form():
-    form = Ragistration(request.form)
-    if request.method == "POST" and form.validate():
-        session["vote"] = form.vote.data
-        session["comment"] = form.comment.data
-        return redirect(url_for("result"))
-    return render_template("meeting/form.html", form=form)
+    return render_template("meeting/form.html")
 
 
-@app.route("/result")
-def result():
-    return render_template("meeting/result.html")
+@app.route("/room")
+def room():
+    ROOMS = rooms()
+    return render_template("meeting/room.html", ROOMS=ROOMS, length=len(ROOMS))
