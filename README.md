@@ -9,11 +9,13 @@
 -   投票用の GoogleForm
 -   部会の開催予定日時，教室
 
-Flask を用いて，web アプリの練習のついでに作成した．Wiki からの Scraping には BeautifulSoup を用いた．
+pipenv を用いて仮想環境を構築し，Flask を用いて web アプリの練習のついでに作成した．Wiki からの Scraping には BeautifulSoup を用いた．
 
 # Installation
 
 ## 1. Clone this repository
+
+このリポジトリをクローンする．
 
 ```
 git clone ssh://git@gitlab.mma.club.uec.ac.jp:2223/gae/mma-meeting.git
@@ -21,6 +23,17 @@ git clone ssh://git@gitlab.mma.club.uec.ac.jp:2223/gae/mma-meeting.git
 
 ## 2. Install packages
 
+Pipfile があるので，以下のコマンドでインストールできる．
+
 ```
 pipenv sync
+```
+
+## 3. Web サーバーの起動
+
+以下のコマンドで起動する．
+
+```
+pipenv shell
+python server.py
 ```
