@@ -23,7 +23,7 @@ git clone ssh://git@gitlab.mma.club.uec.ac.jp:2223/gae/mma-meeting.git
 
 ## 2. Install packages
 
-Pipfile があるので，以下のコマンドでインストールできる．
+Pipfile.lock があるので，以下のコマンドでインストールできる．
 
 ```
 pipenv sync
