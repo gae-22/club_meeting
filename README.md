@@ -15,12 +15,12 @@ Flask を用いて，web アプリの練習のついでに作成した．Wiki �
 
 ## 1. Clone this repository
 
-```git clone ssh://git@gitlab.mma.club.uec.ac.jp:2223/gae/mma-meeting.git
-
+```
+git clone ssh://git@gitlab.mma.club.uec.ac.jp:2223/gae/mma-meeting.git
 ```
 
 ## 2. Install packages
 
-```pipenv sync
-
+```
+pipenv sync
 ```
