@@ -5,11 +5,12 @@ name = "pypi"
 
 [packages]
 flask = "*"
-requests = "*"
-beautifulsoup4 = "*"
-urllib3 = "==1.26.6"
 flask-wtf = "*"
+beautifulsoup4 = "*"
 configparser = "*"
+requests = "*"
+urllib3 = "==1.26.6"
+
 
 [dev-packages]
 
