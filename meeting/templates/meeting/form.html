@@ -1,6 +1,13 @@
 {% extends "layout.html" %} {% block content %}
-<iframe
-    src="https://docs.google.com/forms/d/e/1FAIpQLSfGXxFzFfV8qqDDlhDfrq7v7Wy5rwfddPA_sauQZ0bRCvsvvA/viewform?embedded=true"
-    >読み込んでいます…</iframe
->
+
+<h1>
+    今回のパスワード
+    <strong>{{ password }}</strong>
+</h1>
+<p>
+    <a href="https://forms.gle/2eVNqL9nJbNFhMLX6" , target="_blank"
+        >部会フォーム</a
+    >
+</p>
+<img id="qr" src="./../static/images/qr.png" alt="QRコード" />
 {% endblock %}

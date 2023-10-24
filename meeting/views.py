@@ -3,6 +3,7 @@ from meeting import app
 from meeting.models.thread import update
 from meeting.models.agenda import get_agendas
 from meeting.models.room import rooms
+from meeting.models.password import randomname
 
 
 @app.route("/")
@@ -29,7 +30,8 @@ def agenda():
 
 @app.route("/form")
 def form():
-    return render_template("meeting/form.html")
+    password = randomname(6)
+    return render_template("meeting/form.html", password=password)
 
 
 @app.route("/room")
