@@ -1,4 +1,8 @@
 **/__pycache__*
 **/.DS_Store
-.vscode
+**/.vscode
+
+
 **/config.ini
+.deploy_id.txt
+meeting.json

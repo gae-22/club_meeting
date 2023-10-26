@@ -4,6 +4,7 @@ from meeting.models.thread import update
 from meeting.models.agenda import get_agendas
 from meeting.models.room import rooms
 from meeting.models.password import randomname
+from meeting.models.spread import write_agenda
 
 
 @app.route("/")
@@ -23,6 +24,7 @@ def thread():
 def agenda():
     BBS_ARRAY = update()
     agendas = get_agendas()
+    write_agenda()
     return render_template(
         "meeting/agenda.html", BBS_ARRAY=BBS_ARRAY, agendas=agendas, length=len(agendas)
     )

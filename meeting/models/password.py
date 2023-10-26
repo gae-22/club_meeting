@@ -1,5 +1,7 @@
 import random, string
 import datetime
+from meeting.models.spread import write_password
+
 
 password_past = ""
 
@@ -21,6 +23,7 @@ def randomname(n):
             random.choice(string.ascii_lowercase + string.digits) for i in range(n)
         ]
         password_past = password = "".join(randlst)
+        write_password(password)
     else:
         password = password_past
 
