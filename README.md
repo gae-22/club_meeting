@@ -6,10 +6,10 @@
 
 -   今年度のすべての議題
 -   直近の部会の議題
--   投票用の GoogleForm
+-   投票用の GoogleForm へのリンク，パスワード
 -   部会の開催予定日時，教室
 
-pipenv を用いて仮想環境を構築し，Flask を用いて web アプリの練習のついでに作成した．Wiki からの Scraping には BeautifulSoup を用いた．
+その他にも，`gas`を用いて，GoogleFormを自動で作成しています．
 
 # Installation
 
@@ -29,11 +29,14 @@ Pipfile.lock があるので，以下のコマンドでインストールでき�
 pipenv sync
 ```
 
-## 3. Web サーバーの起動
+## 3. Start the virtual environment
 
-以下のコマンドで起動する．
 
 ```
 pipenv shell
+```
+
+## 4. Run the server
+```
 python server.py
 ```
