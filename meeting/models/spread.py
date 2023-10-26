@@ -29,5 +29,5 @@ def write_agenda():
             idx = agenda.find("\n")
             agenda = agenda[:idx]
             if "告知" not in agenda:
-                wks.update_cell(1, k, agenda)
+                wks.update_cell(k, 1, agenda)
                 k += 1
