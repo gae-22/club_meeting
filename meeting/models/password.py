@@ -15,7 +15,7 @@ def reload_time():  # 時刻を確認して部会前かどうかを判定
 
 
 def choose_random():  # ファイルからランダムにパスワードを選択
-    pass_path = "./meeting/models/password.txt"
+    pass_path = "./password.txt"
 
     # ファイルから読み込み
     with open(pass_path, "r") as f:
