@@ -15,12 +15,16 @@ def reload_time():
 
 
 def choose_random():
+    global password_past
     pass_path = "./datas/password.txt"
 
     with open(pass_path, "r") as f:
         lines = f.read().splitlines()
 
-    password = random.choice(lines)
+    while True:
+        password = random.choice(lines)
+        if password != password_past:
+            break
     write_password(password)
     return password
 

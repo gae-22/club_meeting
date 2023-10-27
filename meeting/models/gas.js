@@ -1,4 +1,4 @@
-// これはGoogleAppsScript
+// GoogleAppsScript
 
 // 各アイテム作成
 function createItem(form, title, type, help, required) {
@@ -81,10 +81,12 @@ function main(password) {
     var title = 'パスワード';
     var help = '今回のパスワードを入力してください';
     var password = p_sheet.getRange('B8').getValue();
-    var a = FormApp.createTextValidation()
+    var pass = FormApp.createTextValidation();
+    var valid = pass
         .requireTextMatchesPattern(password)
+        .setHelpText('パスワードが違います')
         .build();
-    createItem(form, title, '記述式', help, true).setValidation(a);
+    createItem(form, title, '記述式', help, true).setValidation(valid);
 
     form.addPageBreakItem()
         .setTitle('議題')
