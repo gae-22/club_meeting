@@ -46,7 +46,7 @@ python server.py
 
 ### 参考
 
-[Flask](https://msiz07-flask-docs-ja.readthedocs.io/ja/latest/)
-[ログインのいるサイトからのスクレイピング](https://zenn.dev/mamekko/articles/ea44fe8a77da7c)
-[Python で SpreadSheet を編集する](https://zenn.dev/eito_blog/articles/02c132bbc1c4bd)
+[Flask](https://msiz07-flask-docs-ja.readthedocs.io/ja/latest/)  
+[ログインのいるサイトからのスクレイピング](https://zenn.dev/mamekko/articles/ea44fe8a77da7c)  
+[Python で SpreadSheet を編集する](https://zenn.dev/eito_blog/articles/02c132bbc1c4bd)  
 [Python でファイルの読み書き](https://zenn.dev/makio/articles/66e7e24d7c4478)
