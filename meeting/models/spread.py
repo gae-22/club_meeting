@@ -1,7 +1,7 @@
 import gspread
 from meeting.models.agenda import get_agendas
 
-key_name = "./meeting.json"
+key_name = "./datas/meeting.json"
 sheet_name = "部会"
 sheet_id = "1SLP8YSEvr7KY5J5g4SNAC4xaaRrCfoFStgmxBl1xkao"
 

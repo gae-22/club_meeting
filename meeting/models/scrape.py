@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 
 def scrape(URL):
-    config_file = "./config.ini"
+    config_file = "./datas/config.ini"
     config = configparser.ConfigParser()
     config.read(config_file, encoding="utf-8")
     name = config.get("User", "name")
