@@ -5,13 +5,18 @@ password_past = ""
 
 
 def reload_time():
-    mtg_time = datetime.time(16, 40, 00)
+    mtg_from_time = datetime.time(16, 40, 00)
+    mtg_to_time = datetime.time(17, 20, 00)
     mtg_wkdy = 0
 
     now_time = datetime.datetime.now().time()
     now_wkdy = datetime.datetime.now().weekday()
 
-    return True if now_time > mtg_time and now_wkdy == mtg_wkdy else False
+    return (
+        True
+        if mtg_from_time < now_time < mtg_to_time and now_wkdy == mtg_wkdy
+        else False
+    )
 
 
 def choose_random():
