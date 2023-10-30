@@ -5,7 +5,7 @@ password_past = ""
 
 
 def reload_time():
-    mtg_time = datetime.time(19, 40, 00)
+    mtg_time = datetime.time(16, 40, 00)
     mtg_wkdy = 0
 
     now_time = datetime.datetime.now().time()
